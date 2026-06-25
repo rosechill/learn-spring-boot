@@ -53,4 +53,32 @@ class PersonControllerTest {
         );
     }
 
+    @Test
+    void createPersonValidationError() throws Exception {
+        mockMvc.perform(
+                post("/person")
+                        .contentType(MediaType.APPLICATION_FORM_URLENCODED)
+//                        .param("firstName", "Jiwon")
+                        .param("middleName", "Mid")
+                        .param("lastName", "Last")
+//                        .param("email", "jiwon@example.com")
+//                        .param("phone", "081254079880")
+                        .param("address.street", "Jalan jalan")
+                        .param("address.city", "Jakarta")
+                        .param("address.country", "Indonesia")
+                        .param("address.postalCode", "11111")
+                        .param("hobbies[0]", "Coding")
+                        .param("hobbies[1]", "Reading")
+                        .param("socialMedias[0].name", "Facebook")
+                        .param("socialMedias[0].location", "facebook.com/Jiwon")
+                        .param("socialMedias[1].name", "Instagram")
+                        .param("socialMedias[1].location", "instagram.com/Jiwon")
+
+
+        ).andExpectAll(
+                status().isBadRequest(),
+                content().string(Matchers.containsString("You send invalid data"))
+        );
+    }
+
 }
