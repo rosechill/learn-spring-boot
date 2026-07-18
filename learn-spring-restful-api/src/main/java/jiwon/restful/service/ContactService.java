@@ -1,13 +1,6 @@
 package jiwon.restful.service;
 
 import jakarta.persistence.criteria.Predicate;
-import jiwon.restful.entity.Contact;
-import jiwon.restful.entity.User;
-import jiwon.restful.model.ContactResponse;
-import jiwon.restful.model.CreateContactRequest;
-import jiwon.restful.model.SearchContactRequest;
-import jiwon.restful.model.UpdateContactRequest;
-import jiwon.restful.repository.ContactRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
@@ -20,7 +13,6 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 @Service
 public class ContactService {

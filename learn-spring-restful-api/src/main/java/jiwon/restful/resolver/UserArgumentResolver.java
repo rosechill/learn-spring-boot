@@ -1,8 +1,6 @@
 package jiwon.restful.resolver;
 
 import jakarta.servlet.http.HttpServletRequest;
-import jiwon.restful.entity.User;
-import jiwon.restful.repository.UserRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.jspecify.annotations.Nullable;
 import org.springframework.beans.factory.annotation.Autowired;

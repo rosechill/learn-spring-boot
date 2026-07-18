@@ -1,7 +1,5 @@
 package jiwon.restful.repository;
 
-import jiwon.restful.entity.Address;
-import jiwon.restful.entity.Contact;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

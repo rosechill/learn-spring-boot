@@ -30,28 +30,23 @@ public class JwtService {
 
     public String generateAccessToken(User user) {
         return Jwts.builder()
-                .subject(user.getEmail())
+                .subject(user.getId().toString())
+                .claim("email", user.getEmail())
+                .claim("role", user.getRole().name())
                 .issuedAt(new Date())
                 .expiration(new Date(System.currentTimeMillis() + expiration))
                 .signWith(getSignKey())
                 .compact();
     }
 
-    public String extractUsername(String token) {
-        return Jwts.parser()
-                .verifyWith(getSignKey())
-                .build()
-                .parseSignedClaims(token)
-                .getPayload()
-                .getSubject();
-
+    public Long extractUserId(String token) {
+        return Long.parseLong(
+                extractClaim(token, Claims::getSubject)
+        );
     }
 
     public boolean isTokenValid(String token, UserDetails userDetails) {
-        String email = extractUsername(token);
-
-        return email.equals(userDetails.getUsername())
-                && !isExpired(token);
+        return !isExpired(token);
     }
 
     private boolean isExpired(String token) {

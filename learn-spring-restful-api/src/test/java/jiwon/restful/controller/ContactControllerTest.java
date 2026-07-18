@@ -1,13 +1,5 @@
 package jiwon.restful.controller;
 
-import jiwon.restful.entity.Contact;
-import jiwon.restful.entity.User;
-import jiwon.restful.model.ContactResponse;
-import jiwon.restful.model.CreateContactRequest;
-import jiwon.restful.model.UpdateContactRequest;
-import jiwon.restful.model.WebResponse;
-import jiwon.restful.repository.ContactRepository;
-import jiwon.restful.repository.UserRepository;
 import jiwon.restful.security.BCrypt;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -23,9 +15,7 @@ import java.util.List;
 import java.util.UUID;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.springframework.test.web.servlet.MockMvcBuilder.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
-import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @SpringBootTest

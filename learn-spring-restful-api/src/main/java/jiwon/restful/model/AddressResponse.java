@@ -1,6 +1,5 @@
 package jiwon.restful.model;
 
-import jiwon.restful.entity.Address;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

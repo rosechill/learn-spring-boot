@@ -1,9 +1,5 @@
 package jiwon.restful.service;
 
-import jiwon.restful.entity.User;
-import jiwon.restful.model.LoginUserRequest;
-import jiwon.restful.model.TokenResponse;
-import jiwon.restful.repository.UserRepository;
 import jiwon.restful.security.BCrypt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

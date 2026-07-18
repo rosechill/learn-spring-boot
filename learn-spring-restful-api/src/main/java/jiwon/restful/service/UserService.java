@@ -1,10 +1,5 @@
 package jiwon.restful.service;
 
-import jiwon.restful.entity.User;
-import jiwon.restful.model.RegisterUserRequest;
-import jiwon.restful.model.UpdateUserRequest;
-import jiwon.restful.model.UserResponse;
-import jiwon.restful.repository.UserRepository;
 import jiwon.restful.security.BCrypt;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,8 +7,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.server.ResponseStatusException;
-
-import java.util.Objects;
 
 @Slf4j
 @Service

@@ -1,13 +1,5 @@
 package jiwon.restful.service;
 
-import jiwon.restful.entity.Address;
-import jiwon.restful.entity.Contact;
-import jiwon.restful.entity.User;
-import jiwon.restful.model.AddressResponse;
-import jiwon.restful.model.CreateAddressRequest;
-import jiwon.restful.model.UpdateAddressRequest;
-import jiwon.restful.repository.AddressRepository;
-import jiwon.restful.repository.ContactRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
